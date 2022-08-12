@@ -18,3 +18,7 @@ async def home(request: Request):
 @app.get("/about", response_class=HTMLResponse)
 async def about(request: Request):
     return templates.TemplateResponse("/pages/about.html", {"request": request})
+
+@app.get("/resume", response_class=HTMLResponse)
+async def resume(request: Request):
+    return templates.TemplateResponse("/pages/resume.html", {"request": request})
