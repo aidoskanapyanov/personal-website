@@ -22,3 +22,7 @@ async def about(request: Request):
 @app.get("/resume", response_class=HTMLResponse)
 async def resume(request: Request):
     return templates.TemplateResponse("/pages/resume.html", {"request": request})
+
+@app.get("/projects", response_class=HTMLResponse)
+async def projects(request: Request):
+    return templates.TemplateResponse("/pages/projects.html", {"request": request})
