@@ -1,6 +1,6 @@
 <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="/">
+    <a class="navbar-item" hx-get="{{ url_for('aboutwebsite') }}" hx-swap="innerHTML" hx-target="#main">
       <h1>Aidos Kanapyanov</h1>
     </a>
 
@@ -13,15 +13,15 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item" href="{{ url_for('about') }}"> about </a>
+      <a class="navbar-item" hx-get="{{ url_for('about') }}" hx-swap="innerHTML" hx-target="#main"> about </a>
 
-      <a class="navbar-item" href="{{ url_for('resume') }}"> resume </a>
+      <a class="navbar-item" hx-get="{{ url_for('resume') }}" hx-swap="innerHTML" hx-target="#main"> resume </a>
 
-      <a class="navbar-item" href="{{ url_for('projects') }}"> projects </a>
+      <a class="navbar-item" hx-get="{{ url_for('projects') }}" hx-swap="innerHTML" hx-target="#main"> projects </a>
 
-      <a class="navbar-item" href="{{ url_for('stats') }}"> stats </a>
+      <a class="navbar-item" hx-get="{{ url_for('stats') }}" hx-swap="innerHTML" hx-target="#main"> stats </a>
 
-      <a class="navbar-item" href="{{ url_for('contact') }}"> contact </a>
+      <a class="navbar-item" hx-get="{{ url_for('contact') }}" hx-swap="innerHTML" hx-target="#main"> contact </a>
     </div>
   </div>
 </nav>

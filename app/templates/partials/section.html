@@ -2,7 +2,9 @@
 <div class="columns is-centered is-fullheight">
   <section id="sidebar" class="column is-one-third">
     <section id="intro">
-      <a class="logo" href="/"><img src="{{ url_for('static', path='/images/ava.jpeg') }}" alt="" /></a>
+      <a class="logo" hx-get="{{ url_for('about') }}" hx-swap="innerHTML" hx-target="#main"
+        ><img src="{{ url_for('static', path='/images/ava.jpeg') }}" alt=""
+      /></a>
       <header>
         <h2>Aidos Kanapyanov</h2>
         <p><a href="mailto:aidos.kanapyanov@alumni.nu.edu.kz">aidos.kanapyanov@alumni.nu.edu.kz</a></p>
@@ -17,6 +19,7 @@
     </section>
   </section>
   <div id="main" class="column box">
+    {% if request.path == '/' %}
     <article class="post" id="projects">
       <header>
         <div class="title">
@@ -25,6 +28,7 @@
       </header>
       <div>{% block article_content %} {% endblock %}</div>
     </article>
+    {% else %} {% include '/partials/article.html' %} {% endif %}
   </div>
 </div>
 {% endblock %}
