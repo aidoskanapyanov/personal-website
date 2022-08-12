@@ -30,3 +30,7 @@ async def projects(request: Request):
 @app.get("/stats", response_class=HTMLResponse)
 async def stats(request: Request):
     return templates.TemplateResponse("/pages/stats.html", {"request": request})
+
+@app.get("/contact", response_class=HTMLResponse)
+async def contact(request: Request):
+    return templates.TemplateResponse("/pages/contact.html", {"request": request})
