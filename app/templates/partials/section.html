@@ -1,0 +1,30 @@
+{% extends "/partials/base.html" %} {% block title %}{% endblock %} {% block content %}
+<div class="columns is-centered is-fullheight">
+  <section id="sidebar" class="column is-one-third">
+    <section id="intro">
+      <a class="logo" href="/"><img src="{{ url_for('static', path='/images/ava.jpeg') }}" alt="" /></a>
+      <header>
+        <h2>Aidos Kanapyanov</h2>
+        <p><a href="mailto:aidos.kanapyanov@alumni.nu.edu.kz">aidos.kanapyanov@alumni.nu.edu.kz</a></p>
+      </header>
+    </section>
+    <section class="blurb">
+      <h2>About</h2>
+      <p>
+        Hi, I'm Aidos. I like building things. I am a <a href="https://nu.edu.kz/">Nazarbayev University</a> graduate. I
+        work at <a href="https://payfintech.kz/">payfintech.kz.</a>
+      </p>
+    </section>
+  </section>
+  <div id="main" class="column box">
+    <article class="post" id="projects">
+      <header>
+        <div class="title">
+          <h2 data-testid="heading">{% block heading %}{% endblock %}</h2>
+        </div>
+      </header>
+      <div>{% block article_content %} {% endblock %}</div>
+    </article>
+  </div>
+</div>
+{% endblock %}
