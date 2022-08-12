@@ -26,3 +26,7 @@ async def resume(request: Request):
 @app.get("/projects", response_class=HTMLResponse)
 async def projects(request: Request):
     return templates.TemplateResponse("/pages/projects.html", {"request": request})
+
+@app.get("/stats", response_class=HTMLResponse)
+async def stats(request: Request):
+    return templates.TemplateResponse("/pages/stats.html", {"request": request})
