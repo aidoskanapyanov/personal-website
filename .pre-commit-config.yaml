@@ -19,3 +19,17 @@ repos:
       - id: check-added-large-files
       - id: debug-statements
         language_version: python3.8
+
+  -   repo: https://github.com/myint/autoflake
+      rev: v1.5.1
+      hooks:
+      -   id: autoflake
+          args:
+          - --recursive
+          - --in-place
+          - --remove-all-unused-imports
+          - --remove-unused-variables
+          - --expand-star-imports
+          - --exclude
+          - __init__.py
+          - --remove-duplicate-keys
